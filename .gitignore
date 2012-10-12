@@ -5,3 +5,4 @@ pip-log.txt
 *.egg-info
 *.pid
 *.old
+*.swp
