@@ -3,3 +3,5 @@
 pip-log.txt
 *.egg
 *.egg-info
+*.pid
+
