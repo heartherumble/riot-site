@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if not articles_page.object_list %}
+        <h3>There are no recent entries.</h3>
+    {% endif %}
+    {% for entry in articles_page.object_list %}
+        <div class="entry{% if loop.first %} first{% else %}{% if loop.last %} last{% endif %}{% endif %}">
+            <h1><a href="{{ SITEURL }}/{{ entry.url }}" rel="bookmark" title="Permalink to {{ entry.url }}">{{ entry.title }}</a><span class="date">{{ entry.locale_date }}</span>
+            </h1>
+            {% if entry.tags %}
+            <div class="post-info">
+                    <ul class="inline-tag-list">
+                    {% for tag in entry.tags %}
+                        <li><a class="tag" href="{{ SITEURL }}/{{ tag.url }}"><span>{{ tag }}</span></a></li>
+                    {% endfor %}
+                    </ul>
+            </div>
+            {% endif %}
+            <div class="content clear">{{ entry.content }}</div>
+        </div>
+    {% endfor %}
+    {% include 'pagination.html' %}
+{% endblock %}
