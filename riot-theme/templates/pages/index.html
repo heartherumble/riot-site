@@ -1,11 +1,20 @@
 {% extends 'base.html' %}
 
+{% block title %}{{ page.title }} - {{ super() }}{% endblock %}
+
 {% block css %}
         <link rel="stylesheet" href=".././theme/css/base.css">
         <link rel="stylesheet" href=".././theme/css/grid.css">
         <link rel="stylesheet" href=".././theme/css/homepage.css">
 {% endblock %}
+
 {% block body %}
+        {% if page.slug == '404' %}
+        <section id="what" class="row first error404">
+            <h1><div class="logo"><h1><a href="/">Riot</a></h1></div></h1>
+            {{ page.content }}
+        </section>
+        {% else %}
         <section id="what" class="row first">
             <h2>Hello.</h2>
             <h2>We're from Chicago &amp; we build things, so people can go surfing.</h2>
@@ -52,4 +61,5 @@
         <footer>
             <p>&copy; 2012 Riot Inc. All Rights Reserved.</p>
         </footer>
+        {% endif %}
 {% endblock %}

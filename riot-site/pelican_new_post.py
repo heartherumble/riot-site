@@ -49,7 +49,7 @@ def main():
     # Check if new content is page or post
     # Construct correct path (from settings)
     if args.page:
-        docroot = os.path.join(PELICAN_ROOT, 'pages')
+        docroot = os.path.join(PELICAN_ROOT, 'content/pages')
         ctype = 'page'
     else:
         docroot = os.path.join(PELICAN_ROOT, 'content')
