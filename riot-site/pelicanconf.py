@@ -17,5 +17,9 @@ PAGE_DIR = 'pages'
 DELETE_OUTPUT_DIRECTORY = False
 ARTICLE_URL = 'notebook/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
 ARTICLE_SAVE_AS = 'notebook/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
-PAGE_URL = '{slug}'
-PAGE_SAVE_AS = '{slug}/index.html'
+#PAGE_URL = '{slug}'
+#PAGE_SAVE_AS = '{slug}/index.html'
+
+INDEX_SAVE_AS = 'notebook/index.html'
+PAGE_SAVE_AS = '{slug}.html'
+PAGE_URL = '{slug}.html'

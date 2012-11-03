@@ -11,60 +11,46 @@
         <meta name="robots" content="index, follow, noodp">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="{{ SITEURL }}/theme/img/icons/favicon.ico">
+        {% block css %}
         <link rel="stylesheet" href="{{ SITEURL }}/theme/css/base.css">
+        {% endblock %}
+        <script src="{{ SITEURL }}/theme/js/modernizr.js"></script>
+        <!-- IE Fix for HTML5 Tags -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
     </head>
-    <body class="tk-lemonde">
+    <body>
+        <div id="redline"></div>
+        {% block body %}
         <div id="container">
-            <header>
-                <div id="follow">
-                    <ul class="follow-me">
-                        <li class="twitter"><a href="http://twitter.com/heartherumble/">twitter</a></li>
-                        <li class="github"><a href="http://github.com/heartherumble/">github</a></li>
-                        {% if FEED_RSS %}
-                        <li class="feed"><a href="{{ FEED_DOMAIN}}/{{ FEED_RSS }}">subscribe</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
-                <div class="logo"><h1><a href="/">Riot</a></h1></div>
-                <div><a id="follow-link" href="#follow">hear the rumble</a></div>
-                <div class="nav">
-                    <ul>
-                        <li><a href="{{ SITEURL }}">Notebook</a></li>
-                        <li><a href="archives.html">Archive</a></li>
-                        {% for title, link in MENUITEMS %}
-                        <li><a href="{{ link }}">{{ title }}</a></li>
-                        {% endfor %}
-                        {% if DISPLAY_PAGES_ON_MENU %}
-                        {% for page in PAGES %}
-                        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
-                        {% endfor %}
-                        {% endif %}
-                    </ul>
-                </div>
-            </header>
+            {% include 'pages/header.html' %}
             <div id="main" class="clear">
                 {% if title %}
                     <h1>{{ title }}</h1>
                 {% endif %}
                 {% block content %}{% endblock %}
             </div>
-            <footer>
-                <p>&copy; 2011 Riot Inc. All Rights Reserved.</p>
-            </footer>
+            {% include 'pages/footer.html' %}
         </div>
+        {% endblock %}
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
         <script>
             $(document).ready(function(){
-                $("#follow").toggle();
                 $("#follow-link").click(function(e){$("#follow").slideToggle("slow");e.preventDefault()});
             });
         </script>
         {% block javascript %}{% endblock %}
-        <script type="text/javascript" src="http://include.reinvigorate.net/re_.js"></script>
         <script type="text/javascript">
-        try {
-        reinvigorate.track("q9z39-5x691zxv4n");
-        } catch(err) {}
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-28611875-2']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
         </script>
     </body>
 </html>

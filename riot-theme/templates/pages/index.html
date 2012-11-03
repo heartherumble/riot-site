@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block css %}
+        <link rel="stylesheet" href=".././theme/css/base.css">
+        <link rel="stylesheet" href=".././theme/css/grid.css">
+        <link rel="stylesheet" href=".././theme/css/homepage.css">
+{% endblock %}
+{% block body %}
+        <section id="what" class="row first">
+            <h2>Hello.</h2>
+            <h2>We're from Chicago &amp; we build things, so people can go surfing.</h2>
+            <!-- <h2>We like Code, Pork &amp; Beer <span class="note">in any order</span></h2> -->
+            <h1>We are <div class="logo"><h1>Riot</h1></div></h1>
+        </section>
+        <section id="work" class="row">
+            <h2>Work</h2>
+            <p>Here's a sampling of projects we've worked on and some of the people &amp; groups
+                with whom we've had the privilege of collaborating.</p>
+            <ul id="work-recent-work" class="two phone-two columns first-child">
+              <li><h3>Recent Work</h3></li>
+              <li class="project"><a href="http://www.foodchannel.com/" target="_blank">The Food Channel</a></li>
+              <li class="project"><a href="http://www.girlandthegoat.com/" target="_blank">Girl and the Goat</a></li>
+              <li class="project"><a href="http://www.inferentialfocus.com/" target="_blank">Inferential Focus</a></li>
+              <li class="project"><a href="http://www.septimusheap.com/" target="_blank">Septimus Heap</a></li>
+              <li class="project"><a href="http://shop.aliceandolivia.com/" target="_blank">Alice + Olivia</a></li>
+              <li class="project"><a href="http://epochchicago.com/" target="_blank">Epoch</a></li>
+              <li class="read-on">More to come</li>
+            </ul>
+
+            <ul id="work-worked-with" class="two phone-two columns">
+              <li><h3>We’ve worked with</h3></li>
+              <li class="project">Art Institute of Chicago</li>
+              <li class="project">Clinton Global Initiative</li>
+              <li class="project">Emma</li>
+              <li class="project">Kohls</li>
+              <li class="project">National Geographic</li>
+              <li class="project">Navy &amp; Lavender</li>
+              <li class="project">PIE</li>
+              <li class="project">Rick Bayless</li>
+              <li class="project">Threadless</li>
+            </ul>
+        </section>
+        <section id="who" class="row">
+            <h2>Who</h2>
+            <p>We are a development studio focused on building products. Our language of choice is Python, but we're also fluent in Javascript, Ruby, Go and PHP. We use Github for code, Basecamp for projects and Pivotal Tracker for stories.</p>
+            <p>Riot was founded by <a href="http://git.io/trent">Trent</a> and <a href="http://git.io/rohit">Rohit</a>. We work for clients who value good technology and pragmatic thought. We're located on Michigan Avenue, right above a Chipotle.</p>
+        </section>
+        <section id="write" class="row">
+            <h2>Write us</h2>
+            <p>We'd love to hear from you! <a href="mailto:hello@riot.io">Get in touch</a>.</p>
+        </section>
+        <footer>
+            <p>&copy; 2012 Riot Inc. All Rights Reserved.</p>
+        </footer>
+{% endblock %}

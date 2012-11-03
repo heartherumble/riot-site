@@ -7,7 +7,7 @@ PELICANOPTS=
 
 BASEDIR=$(PWD)
 INPUTDIR=$BASEDIR/content
-OUTPUTDIR=$BASEDIR/output
+OUTPUTDIR=$BASEDIR/../../gh-pages
 CONFFILE=$BASEDIR/pelicanconf.py
 
 ###

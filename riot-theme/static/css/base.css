@@ -85,6 +85,7 @@ header a:hover{color:#ccc;}
 
 .logo h1 a { display:block;text-indent: -9999px;height:71px;}
 
+#follow { display:none; }
 #follow {height:50px; background-color:#333;-moz-border-radius-bottomleft: 8px 8px; border-bottom-left-radius: 8px 8px;}
 #follow-link {background: none repeat scroll 0 0 red;
     color: #FFFFFF;
