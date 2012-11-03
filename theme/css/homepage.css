@@ -148,3 +148,15 @@ ul li {
 
 footer p { margin: 0 auto; width: 850px; display: block; float:none; text-align: left;}
 
+.error404 p img {
+  width:500px;
+  height:331px;
+  border-radius: 15px;
+}
+
+.error404 em {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+  font-style: normal;
+  padding: 0 4px;
+}
+
