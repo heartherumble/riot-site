@@ -24,8 +24,8 @@
     <body>
         <div id="redline"></div>
         <div id="icons">
-            <a href="http://github.com/heartherumble"><span class="github">G</span></a>
-            <a href="http://twitter.com/heartherumble"><span class="twitter">t</span></a>
+            <a href="http://github.com/heartherumble" title="github"><span class="github">G</span></a>
+            <a href="http://twitter.com/heartherumble" title="twitter"><span class="twitter">t</span></a>
         </div>
         {% block body %}
         <div id="container">
@@ -39,12 +39,6 @@
             {% include 'pages/footer.html' %}
         </div>
         {% endblock %}
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js"></script>
-        <script>
-            $(document).ready(function(){
-                $("#follow-link").click(function(e){$("#follow").slideToggle("slow");e.preventDefault()});
-            });
-        </script>
         {% block javascript %}{% endblock %}
         <script type="text/javascript">
           var _gaq = _gaq || [];

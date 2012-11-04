@@ -3,7 +3,8 @@
 
 AUTHOR = u"Riot"
 SITENAME = u"Riot Inc."
-SITEURL = 'http://riot.io'
+SITEURL = '/'
+RELATIVE_URLS = False
 
 TIMEZONE = 'America/Chicago'
 

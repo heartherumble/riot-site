@@ -5,7 +5,7 @@ html{
   font-size: 62.5%;
 }
 
-body { background: #fff; font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 13px; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
+body { font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif; font-size: 13px; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
 
 body {
     background-color:#d5d5d5;
@@ -35,21 +35,23 @@ body>*{
     left: 0px;
     z-index: 1000;
     -moz-box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.2);
-   -webkit-box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.2);
-   box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 #icons {
   font-family: 'JustVector';
   position: fixed;
-  top: 35px;
+  top: 25px;
   left: 10px;
 }
 
 #icons a {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     text-shadow: 0 0 1px #000000;
 }
+
+#icons a .blog { font-size: 3.5rem; }
 
 #icons a:hover {
     text-decoration: none;
@@ -58,8 +60,7 @@ body>*{
 }
 
 h1{
-  /*font-family: "SupriaSansBold", Helvetica, sans-serif;*/
-  font-size: 8rem;
+  font-size: 7rem;
   line-height: 9.0rem;
   letter-spacing: -0.025em;
   margin: 50px 0px 40px 0px;
@@ -68,8 +69,7 @@ h1{
 }
 
 h2{
-  /*font-family: "SupriaSansBold", Helvetica, sans-serif;*/
-  font-size: 7.0rem;
+  font-size: 6.0rem;
   line-height: 6.5rem;
   letter-spacing: -0.025em;
   margin: 50px 0px 40px 0px;
@@ -80,17 +80,15 @@ h2{
 }
 
 h2 span.note {
-    float: right;
-    font-size: 2rem;
-    position: relative;
-    right: 10px;
-    bottom: 5px;
+  float: right;
+  font-size: 2rem;
+  position: relative;
+  right: 10px;
+  bottom: 5px;
 }
 
 p{
-  /*font-family: "SupriaSansLight";*/
-  /*color: rgba(240,240,240,1);*/
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 3.0rem;
   letter-spacing: 0.045em;
   font-weight: 200;
@@ -113,23 +111,24 @@ ul{
 }
 
 ul li {
-    font-weight: 200;
-    letter-spacing: 0.05em;
+  font-weight: 200;
+  letter-spacing: 0.05em;
 }
 
 #work li h3 {
-    color: #f0f0f0;
+  color: #f0f0f0;
 }
 
 #work li.project {
-    border: 1px dotted #F0F0F0;
-    padding: 3px 10px;
-    font-size: 2rem;
-    color: #444;
+  border: 1px dotted #F0F0F0;
+  padding: 3px 10px;
+  font-size: 1.9rem;
+  color: #444;
 }
 
 #work li.project a, #work li.project a:visited { color: #444; }
 #work li.project a:hover { color: #999; }
+#work li.read-on { font-size: 1rem; }
 
 #work p{
   margin-bottom: 10px;
@@ -137,17 +136,17 @@ ul li {
 
 .logo { float:none; margin: 0px; border-top: none; display: inline-block; }
 .logo a {
-    display: block;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 0px;
-    height: 80px;
-    width: 225px;
-    background: url("../img/logo.png") center left no-repeat;
-    background-size: 77%;
-    background-position: top left;
-    cursor: pointer;
+  display: block;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0px;
+  height: 72px;
+  width: 225px;
+  background: url("../img/logo.png") center left no-repeat;
+  background-size: 70%;
+  background-position: top left;
+  cursor: pointer;
 }
 
 .container{
@@ -155,10 +154,10 @@ ul li {
 }
 
 .row{
-  max-width: 850px;
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 75px;
+  margin-bottom: 55px;
 }
 
 .row.first { border-top:none; }
@@ -168,21 +167,19 @@ ul li {
 
 .row .phone-two.columns { width: 47.8% !important; }
 
-footer p { margin: 0 auto; width: 850px; display: block; float:none; text-align: left;}
+footer p { margin: 0 auto; width: 750px; display: block; float:none; text-align: left;}
 
 .error404 p { text-align: center; position: relative; }
 .error404 p img {
-  width:500px;
-  height:331px;
+  width: 500px;
+  height: 331px;
   border-radius: 15px;
 }
-
 .error404 em {
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
   font-style: normal;
   padding: 0 4px;
 }
-
 .error404 .footnote img { width: 15px; height: 15px; }
 .error404 .footnote p, .error404 .footnote li  { text-align: left; font-size:1.2rem; }
 .error404 sup { vertical-align: super }
