@@ -118,14 +118,18 @@ ul li {
 }
 
 .logo { float:none; margin: 0px; border-top: none; display: inline-block; }
-.logo h1 {
-    text-indent: -9999px;
+.logo a {
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
     margin: 0px;
     height: 80px;
     width: 225px;
     background: url("../img/logo.png") center left no-repeat;
     background-size: 77%;
     background-position: top left;
+    cursor: pointer;
 }
 
 .container{
@@ -148,6 +152,7 @@ ul li {
 
 footer p { margin: 0 auto; width: 850px; display: block; float:none; text-align: left;}
 
+.error404 p { text-align: center; position: relative; }
 .error404 p img {
   width:500px;
   height:331px;
@@ -159,4 +164,9 @@ footer p { margin: 0 auto; width: 850px; display: block; float:none; text-align:
   font-style: normal;
   padding: 0 4px;
 }
+
+.error404 .footnote img { width: 15px; height: 15px; }
+.error404 .footnote p, .error404 .footnote li  { text-align: left; font-size:1.2rem; }
+.error404 sup { vertical-align: super }
+.error404 sup a { font-size: 1rem; position: absolute; top: 0; }
 
