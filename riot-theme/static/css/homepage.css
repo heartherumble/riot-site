@@ -39,6 +39,24 @@ body>*{
    box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
+#icons {
+  font-family: 'JustVector';
+  position: fixed;
+  top: 35px;
+  left: 10px;
+}
+
+#icons a {
+    font-size: 4.5rem;
+    text-shadow: 0 0 1px #000000;
+}
+
+#icons a:hover {
+    text-decoration: none;
+    color: #f0f0f0;
+    text-shadow: 0 -1px 0 #222;
+}
+
 h1{
   /*font-family: "SupriaSansBold", Helvetica, sans-serif;*/
   font-size: 8rem;
