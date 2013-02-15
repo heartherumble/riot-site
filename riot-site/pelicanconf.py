@@ -24,3 +24,19 @@ ARTICLE_SAVE_AS = 'notebook/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
 INDEX_SAVE_AS = 'notebook/index.html'
 PAGE_SAVE_AS = '{slug}.html'
 PAGE_URL = '{slug}.html'
+
+PLUGINS=['pelican.plugins.sitemap',]
+
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}
