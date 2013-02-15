@@ -60,32 +60,16 @@
 
 &lt;p&gt;The backup script runs hourly and does incremental backups to our S3 bucket.&lt;/p&gt;</summary><category term="aws"></category><category term="s3"></category><category term="backups"></category></entry><entry><title>Timing Code Execution in Python</title><link href="/notebook/2011/Jan/30/timing-code-execution-in-python/" rel="alternate"></link><updated>2011-01-30T00:00:00-06:00</updated><author><name>Riot</name></author><id>tag:,2011-01-30:notebook/2011/Jan/30/timing-code-execution-in-python/</id><summary type="html">&lt;p&gt;I wrote an implementation of the &lt;a href="http://en.wikipedia.org/wiki/Levenshtein_distance"&gt;Levenshtein algorithm&lt;/a&gt; in python a few days back, and today while noodling around, I came across another implementation of the same algorithm, written by &lt;a href="http://hetland.org"&gt;Magnus Hetland&lt;/a&gt; the author of &lt;a href="http://www.amazon.com/Python-Algorithms-Mastering-Basic-Language/dp/1430232374/"&gt;Python Algorithms&lt;/a&gt; and wanted to see which was the "faster" implementation.&lt;/p&gt;
 &lt;p&gt;So, enter the &lt;a href="http://docs.python.org/library/timeit.html"&gt;timeit()&lt;/a&gt; module in python. Here's what I did:&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt; 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;levenshtein&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;levenshtein&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="s"&gt;&amp;quot;Magnus&amp;#39;s Code&amp;quot;&lt;/span&gt;
-&lt;span class="o"&gt;...&lt;/span&gt;     
+&lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="n"&gt;Code&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;...&lt;/span&gt;   
+&lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;leven&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="s"&gt;&amp;quot;Rohit&amp;#39;s Code&amp;quot;&lt;/span&gt;
-&lt;span class="o"&gt;...&lt;/span&gt;     
+&lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="n"&gt;Code&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="o"&gt;...&lt;/span&gt;     
+&lt;span class="o"&gt;...&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;timeit&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;timeit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Timer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;from __main__ import levenshtein&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stmt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;levenshtein(&amp;quot;plumber&amp;quot;,&amp;quot;causes&amp;quot;)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;timeit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t1&lt;/span&gt;
@@ -94,22 +78,17 @@
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t2&lt;/span&gt;
 &lt;span class="mf"&gt;68.573153972625732&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
 
 &lt;p&gt;Seems like Magnus has me beat :(.&lt;/p&gt;
 &lt;p&gt;One point to note here is that timeit() temporarily turns off garbage collection, so if your code requires it you will need to add it in.&lt;/p&gt;
-&lt;table class="codehilitetable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4
-5
-6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;gc&lt;/span&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;gc&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
 &lt;span class="s"&gt;... from __main__ import levenshtein&lt;/span&gt;
 &lt;span class="s"&gt;... gc.enable()&lt;/span&gt;
 &lt;span class="s"&gt;... &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;t2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;timeit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Timer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stmt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;levenshtein(&amp;quot;plumber&amp;quot;,&amp;quot;causes&amp;quot;)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;timeit&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+
 
 &lt;p&gt;There is also quite a nice collection of python performance tips &lt;a href="http://wiki.python.org/moin/PythonSpeed/PerformanceTips"&gt;here&lt;/a&gt;.&lt;/p&gt;</summary><category term="python"></category><category term="execution"></category><category term="timing"></category></entry></feed>

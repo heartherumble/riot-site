@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Page not found - Riot</title>
         <meta name="description" content="We are Riot and we do great work.">
-        <meta name="keywords" content="riot great work">
+        <meta name="keywords" content="riot great work python django go">
         <meta http-equiv="imagetoolbar" content="false">
         <meta name="robots" content="index, follow, noodp">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,13 +23,12 @@
         <![endif]-->
     </head>
     <body>
-        <div id="redline"></div>
-        <div id="icons">
-            <a href="/notebook/" title="notebook"><span class="notebook">r</span></a>
-            <a href="http://github.com/heartherumble" title="github"><span class="github">G</span></a>
-            <a href="http://twitter.com/heartherumble" title="twitter"><span class="twitter">t</span></a>
-        </div>
-                        <section id="what" class="row first error404">
+                <div id="redline"></div>
+        <section id="links" class="row first">
+            <a href="/notebook/" title="notebook" id="notebook">Notebook</a>
+            <a href="http://github.com/heartherumble" title="github" id="github">Github</a>
+            <a href="http://twitter.com/heartherumble" title="twitter" id="twitter">Twitter</a>
+        </section>                        <section id="what" class="row first error404">
             <h1><div class="logo"><a href="/">Riot</a></div></h1>
             <p>That page seems to have gone missing!</p>
 <p><img alt="Chicago's finest" src=".././theme/img/chicago_police.jpg" title="Chicago's finest" /></p>
@@ -43,10 +42,12 @@
 </ol>
 </div>
         </section>
-        <footer>
-            <p>&copy; 2012 Riot Inc. All Rights Reserved.</p>
-        </footer>
-                        <script type="text/javascript">
+                        <footer>
+            <p>&copy; 2013 Riot Inc. All Rights Reserved.</p>
+        </footer>                <script src="/theme/js/zepto.js"></script>
+        <script src="/theme/js/raphael.js"></script>
+        <script src="/theme/js/riot.js"></script>
+        <script type="text/javascript">
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-28611875-2']);
           _gaq.push(['_trackPageview']);
