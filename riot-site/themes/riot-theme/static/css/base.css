@@ -56,8 +56,6 @@ body, select, input, textarea {
   font: 10px Georgia, serif;
 }
 
-body {background:url("../img/bg.gif") repeat scroll 0 0 transparent;}
-
 p, li {
     font-size: 1.4em;
     line-height: 1.5em;
