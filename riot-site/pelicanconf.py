@@ -12,7 +12,7 @@ DEFAULT_LANG = 'en'
 
 DEFAULT_PAGINATION = 10
 DISPLAY_PAGES_ON_MENU = True
-THEME = 'riot-theme'
+THEME = 'themes/riot-theme'
 PAGE_DIR = 'pages'
 
 DELETE_OUTPUT_DIRECTORY = False
