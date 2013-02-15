@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <!--[if IE]><![endif]-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Riot</title>
+        <title>Backing up servers to S3 : Notebook - Riot</title>
         <meta name="description" content="We are Riot and we do great work.">
         <meta name="keywords" content="riot great work python django go">
         <meta http-equiv="imagetoolbar" content="false">
@@ -12,8 +12,11 @@
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <link rel="shortcut icon" href="/theme/img/icons/favicon.ico">
         <link rel="stylesheet" href="/theme/type/stylesheet.css">
-                <link rel="stylesheet" href="/theme/css/base.css">
-                <script src="/theme/js/modernizr.js"></script>
+                        <link rel="stylesheet" href="/theme/css/base.css">
+        
+        <link rel="stylesheet" href="/theme/css/grid.css">
+        <link rel="stylesheet" href="/theme/css/homepage.css">
+        <script src="/theme/js/modernizr.js"></script>
         <!-- IE Fix for HTML5 Tags -->
         <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,25 +28,20 @@
             <a href="/notebook/" title="notebook" id="notebook">Notebook</a>
             <a href="http://github.com/heartherumble" title="github" id="github">Github</a>
             <a href="http://twitter.com/heartherumble" title="twitter" id="twitter">Twitter</a>
-        </section>                <div id="container">
-            <div id="main" class="clear">
-                                <section id="content" class="body">
-  <header>
-    <h2 class="entry-title">
-      <a href="notebook/2011/Feb/19/backing-up-servers-to-s3/" rel="bookmark"
-         title="Permalink to Backing up servers to S3">Backing up servers to S3</a></h2>
-  
-  </header>
-  <footer class="post-info">
-    <abbr class="published" title="2011-02-19T00:00:00">
-      Sat 19 February 2011
-    </abbr>
-        <address class="vcard author">
-      By <a class="url fn" href="/author/riot.html">Riot</a>
-    </address>
-      </footer><!-- /.post-info -->
-  <div class="entry-content">
-    <p>As part of our build automation here at Riot, we've been trying to find solid options to backup our servers (configs, logs, data etc.) to an off-site location. Our provider does daily backups of our servers and restores data on demand, which is certainly nice, but left us wanting more fine grained control of the process. Cost, simplicity and security were our top concerns, and our search led us to start using <a href="http://www.nongnu.org/duplicity/">duplicity</a> combined with Amazon's <a href="https://s3.amazonaws.com/">S3</a>. Here's how we use it.</p>
+        </section>            <section id="logo-header" class="row first">
+        <h1><div class="logo"><a href="/">Riot</a></div></h1>
+    </section>
+    <section id="post" class="row post">
+        <h4><a href="/notebook/">&laquo; back</a></h4>
+        <h1>Backing up servers to S3<span class="date">Sat 19 February 2011</span></h1>
+                <div class="post-info">
+                <ul class="inline-tag-list">
+                                    <li><a class="tag" href="/tag/aws.html"><span>aws</span></a></li>
+                                    <li><a class="tag" href="/tag/s3.html"><span>s3</span></a></li>
+                                    <li><a class="tag" href="/tag/backups.html"><span>backups</span></a></li>
+                                </ul>
+        </div>
+                <div class="content clear"><p>As part of our build automation here at Riot, we've been trying to find solid options to backup our servers (configs, logs, data etc.) to an off-site location. Our provider does daily backups of our servers and restores data on demand, which is certainly nice, but left us wanting more fine grained control of the process. Cost, simplicity and security were our top concerns, and our search led us to start using <a href="http://www.nongnu.org/duplicity/">duplicity</a> combined with Amazon's <a href="https://s3.amazonaws.com/">S3</a>. Here's how we use it.</p>
 <h2>Setup</h2>
 <p>You will need to have librsync installed on your system as well. In ubuntu: </p>
 <div class="codehilite"><pre><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">librsync</span><span class="o">-</span><span class="n">dev</span>
@@ -102,12 +100,9 @@
 </pre></div>
 
 
-<p>The backup script runs hourly and does incremental backups to our S3 bucket.</p>
-  </div><!-- /.entry-content -->
-</section>
-            </div>
-        </div>
-                        <footer>
+<p>The backup script runs hourly and does incremental backups to our S3 bucket.</p></div>
+    </section>
+                <footer>
             <p>&copy; 2013 Riot Inc. All Rights Reserved.</p>
         </footer>                <script src="/theme/js/zepto.js"></script>
         <script src="/theme/js/raphael.js"></script>

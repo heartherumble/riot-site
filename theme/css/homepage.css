@@ -161,6 +161,11 @@ pre {
   margin: 25px 0 15px;
 }
 
+.post h4 {
+  padding-top: 5px;
+  float: right;
+}
+
 .date {
   color: #f00;
   display: block;
