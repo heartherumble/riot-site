@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block css %}
+        {{ super() }}
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/grid.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/homepage.css">
+{% endblock %}
+
+{% block title %}{{ article.title }} : Notebook - {{ super() }}{% endblock %}
+
+{% block body %}
+    <section id="logo-header" class="row first">
+        <h1><div class="logo"><a href="/">Riot</a></div></h1>
+    </section>
+    <section id="post" class="row post">
+        <h4><a href="/notebook/">&laquo; back</a></h4>
+        <h1>{{ article.title }}<span class="date">{{ article.locale_date }}</span></h1>
+        {% if article.tags %}
+        <div class="post-info">
+                <ul class="inline-tag-list">
+                {% for tag in article.tags %}
+                    <li><a class="tag" href="{{ SITEURL }}/{{ tag.url }}"><span>{{ tag }}</span></a></li>
+                {% endfor %}
+                </ul>
+        </div>
+        {% endif %}
+        <div class="content clear">{{ article.content }}</div>
+    </section>
+{% endblock %}
