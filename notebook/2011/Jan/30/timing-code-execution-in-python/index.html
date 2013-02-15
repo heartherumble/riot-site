@@ -12,10 +12,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/theme/img/icons/favicon.ico">
         <link rel="stylesheet" href="/theme/type/stylesheet.css">
-        
-        <link rel="stylesheet" href="/theme/css/base.css">
-        
-        <script src="/theme/js/modernizr.js"></script>
+                <link rel="stylesheet" href="/theme/css/base.css">
+                <script src="/theme/js/modernizr.js"></script>
         <!-- IE Fix for HTML5 Tags -->
         <!--[if lt IE 9]>
           <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -24,18 +22,17 @@
     <body>
         <div id="redline"></div>
         <div id="icons">
+            <a href="/notebook/" title="notebook"><span class="notebook">r</span></a>
             <a href="http://github.com/heartherumble" title="github"><span class="github">G</span></a>
             <a href="http://twitter.com/heartherumble" title="twitter"><span class="twitter">t</span></a>
         </div>
-        
-        <div id="container">
+                <div id="container">
             <header>
     <div id="follow">
         <ul class="follow-me">
             <li class="twitter"><a href="http://twitter.com/heartherumble/">twitter</a></li>
             <li class="github"><a href="http://github.com/heartherumble/">github</a></li>
-            
-        </ul>
+                    </ul>
     </div>
     <div class="logo"><h1><a href="/">Riot</a></h1></div>
     <div><a id="follow-link" href="#follow">hear the rumble</a></div>
@@ -45,26 +42,22 @@
             <li><a href="/about-us/">About Us</a></li>
         </ul>
     </div>
-</header>
-            <div id="main" class="clear">
-                
-                
-<section id="content" class="body">
+</header>            <div id="main" class="clear">
+                                <section id="content" class="body">
   <header>
     <h2 class="entry-title">
       <a href="notebook/2011/Jan/30/timing-code-execution-in-python/" rel="bookmark"
          title="Permalink to Timing Code Execution in Python">Timing Code Execution in Python</a></h2>
+  
   </header>
   <footer class="post-info">
     <abbr class="published" title="2011-01-30T00:00:00">
       Sun 30 January 2011
     </abbr>
-    
-    <address class="vcard author">
+        <address class="vcard author">
       By <a class="url fn" href="/author/riot.html">Riot</a>
     </address>
-    
-  </footer><!-- /.post-info -->
+      </footer><!-- /.post-info -->
   <div class="entry-content">
     <p>I wrote an implementation of the <a href="http://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein algorithm</a> in python a few days back, and today while noodling around, I came across another implementation of the same algorithm, written by <a href="http://hetland.org">Magnus Hetland</a> the author of <a href="http://www.amazon.com/Python-Algorithms-Mastering-Basic-Language/dp/1430232374/">Python Algorithms</a> and wanted to see which was the "faster" implementation.</p>
 <p>So, enter the <a href="http://docs.python.org/library/timeit.html">timeit()</a> module in python. Here's what I did:</p>
@@ -123,15 +116,11 @@
 <p>There is also quite a nice collection of python performance tips <a href="http://wiki.python.org/moin/PythonSpeed/PerformanceTips">here</a>.</p>
   </div><!-- /.entry-content -->
 </section>
-
             </div>
                         <footer>
                 <p>&copy; 2012 Riot Inc. All Rights Reserved.</p>
-            </footer>
-        </div>
-        
-        
-        <script type="text/javascript">
+            </footer>        </div>
+                        <script type="text/javascript">
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-28611875-2']);
           _gaq.push(['_trackPageview']);
