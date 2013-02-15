@@ -1,5 +1,30 @@
 Riot Inc. Website
 =================
+This the source repository for the Riot Inc. website. The actual site is
+served from the ``gh-pages`` branch.
 
-Publishing Guidelines
---------------------
+3rd Party Requirements
+----------------------
+Markdown==2.2.0
+Pygments==1.5
+pelican==3.0
+
+Initial Setup
+-------------
+
+
+
+How-to: Author & publish a blog post
+-------------------------------------
+
+
+How-to: Author & publish a new page
+-----------------------------------
+
+
+How-to: Author & publish a new page with a custom template
+----------------------------------------------------------
+
+
+
+
