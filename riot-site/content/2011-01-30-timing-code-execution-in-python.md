@@ -8,17 +8,17 @@ I wrote an implementation of the [Levenshtein algorithm](http://en.wikipedia.org
 
 So, enter the [timeit()](http://docs.python.org/library/timeit.html) module in python. Here's what I did:
 
-    #!python
+    :::python
     >>> def levenshtein(a,b):
     ...     "Magnus's Code"
-    ...     
+    ...
     ...     [ Code here ]
-    ...   
+    ...
     >>> def leven(a,b):
     ...     "Rohit's Code"
-    ...     
+    ...
     ...     [ Code here ]
-    ...     
+    ...
     >>> import timeit
     >>> t1 = timeit.Timer(setup='from __main__ import levenshtein', stmt='levenshtein("plumber","causes")').timeit()
     >>> t1
@@ -31,7 +31,7 @@ Seems like Magnus has me beat :(.
 
 One point to note here is that timeit() temporarily turns off garbage collection, so if your code requires it you will need to add it in.
 
-    #!python
+    :::python
     >>> import gc
     >>> setup = """\
     ... from __main__ import levenshtein

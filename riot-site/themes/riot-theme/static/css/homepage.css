@@ -39,25 +39,16 @@ body>*{
     box-shadow: -1px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-#icons {
-  font-family: 'JustVector';
-  position: fixed;
-  top: 25px;
-  left: 10px;
+#links {
+  position: relative;
+  margin-top: 25px;
+  right: 10px;
+  text-align: right;
+  margin-bottom: 0;
 }
 
-#icons a {
-    font-size: 3.5rem;
-    text-shadow: 0 0 1px #000000;
-}
-
-#icons a .notebook { font-size: 2.5rem; vertical-align: text-top; }
-
-#icons a:hover {
-    text-decoration: none;
-    color: #f0f0f0;
-    text-shadow: 0 -1px 0 #222;
-}
+#logo-header { margin-bottom:0; }
+#logo-header h1 { margin: 0; }
 
 h1{
   font-size: 7rem;
@@ -115,6 +106,12 @@ ul li {
   letter-spacing: 0.05em;
 }
 
+pre {
+  font-size: 1.2rem;
+  font-family: "Liberation Mono", Courier, monospace;
+  overflow: auto;
+}
+
 #work li h3 {
   color: #f0f0f0;
 }
@@ -151,6 +148,43 @@ ul li {
 
 .container{
   padding: 0px 50px;
+}
+
+.post {
+  background-color: #e5e5e5;
+  padding: 0 25px;
+}
+
+.post h1 {
+  font-size: 5rem;
+  letter-spacing: 0;
+  line-height: 4rem;
+  margin: 25px 0 15px;
+}
+
+.date {
+  color: #f00;
+  display: block;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: normal;
+  padding: 10px 0 0 0;
+}
+
+.content h2 {
+  font-size: 3rem !important;
+  margin-bottom: 0.5em;
+  color: #222;
+  margin: 0;
+  text-shadow: none;
+  line-height: 5rem;
+}
+
+.codehilite {
+  background: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
 }
 
 .row{

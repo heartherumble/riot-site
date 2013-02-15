@@ -1,11 +1,24 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block css %}
+        {{ super() }}
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/grid.css">
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/homepage.css">
+{% endblock %}
+
+{% block title %}Notebook - {{ super() }}{% endblock %}
+
+{% block body %}
+    <section id="logo-header" class="row first">
+        <h1><div class="logo"><a href="/">Riot</a></div></h1>
+    </section>
     {% if not articles_page.object_list %}
-        <h3>There are no recent entries.</h3>
-    {% endif %}
+        <section id="post" class="row post">
+            <h3>There are no recent entries.</h3>
+        </section>
+    {% else %}
     {% for entry in articles_page.object_list %}
-        <div class="entry{% if loop.first %} first{% else %}{% if loop.last %} last{% endif %}{% endif %}">
+        <section id="post-{{ loop.index }}" class="row post">
             <h1><a href="{{ SITEURL }}/{{ entry.url }}" rel="bookmark" title="Permalink to {{ entry.url }}">{{ entry.title }}</a><span class="date">{{ entry.locale_date }}</span>
             </h1>
             {% if entry.tags %}
@@ -18,7 +31,8 @@
             </div>
             {% endif %}
             <div class="content clear">{{ entry.content }}</div>
-        </div>
+        </section>
     {% endfor %}
+    {% endif %}
     {% include 'pagination.html' %}
 {% endblock %}
