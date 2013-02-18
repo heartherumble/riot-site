@@ -1,0 +1,17 @@
+    <section id="logo-header" class="row first">
+            <h1><div class="logo"><a href="/">Riot</a></div></h1>
+    </section>
+    <section id="post" class="row post">
+        <h4><a href="/notebook/">&laquo; back</a></h4>
+        <h1>{{ page.title }}</h1>
+        {% if page.tags %}
+        <div class="post-info">
+                <ul class="inline-tag-list">
+                {% for tag in page.tags %}
+                    <li><a class="tag" href="{{ SITEURL }}/{{ tag.url }}"><span>{{ tag }}</span></a></li>
+                {% endfor %}
+                </ul>
+        </div>
+        {% endif %}
+        <div class="content clear">{{ page.content }}</div>
+    </section>
