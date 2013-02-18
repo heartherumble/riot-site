@@ -126,5 +126,5 @@ The homepage is not in Markdown. You can edit the content by editing this file:
 ``BASE_DIR/src/riot-site/themes/templates/pages/index.html``.
 
 The header and footer content are includes:
-* ``BASE_DIR/src/riot-site/themes/templates/pages/footer.html``
-* ``BASE_DIR/src/riot-site/themes/templates/pages/header.html``
+* ``BASE_DIR/src/riot-site/themes/riot-theme/templates/pages/footer.html``
+* ``BASE_DIR/src/riot-site/themes/riot-theme/templates/pages/header.html``
