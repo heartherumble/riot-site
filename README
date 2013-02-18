@@ -13,17 +13,17 @@ Initial Setup
 -------------
 From a ``BASE_DIR`` (e.g. ``/dev/riot/``) do the following:
 
-* Create a ``riot-site`` folder and ``gh-pages`` folder
+* Create a ``src`` folder and ``gh-pages`` folder
 * Create a virtualenv and activate it
 * Checkout the ``master`` branch
 * Checkout the ``gh-pages`` branch
 * Install requirements
 
 ```bash
-$ mkdir -p riot-site gh-pages
+$ mkdir -p src gh-pages
 $ virtualenv ve
 $ source ve/bin/activate
-$ cd riot-site && git clone git@github.com:heartherumble/riot-site.git
+$ cd src && git clone git@github.com:heartherumble/riot-site.git
 $ git checkout master
 $ cd ../gh-pages/ && git clone git@github.com:heartherumble/riot-site.git
 $ git checkout gh-pages
@@ -33,7 +33,7 @@ $ cd ../ && pip install -r riot-site/requirements.txt
 To preview the site locally:
 
 ```bash
-$ cd BASE_DIR/riot-site/riot-site/
+$ cd BASE_DIR/src/riot-site/
 $ ./develop_server.sh start
 ```
 
@@ -46,9 +46,38 @@ To stop the server:
 $ ./develop_server.sh stop
 ```
 
+> **NOTE**:
+> Contrary to the pelican docs, we are not going to use the Makefile or
+> the make command.
+
+Command-line Utility
+--------------------
+```bash
+» ./pelican_new_post.py --help
+usage: pelican_new_post.py [-h] [--page] [--post] [-c CATEGORY] [-t TAGS] title
+
+Create a new post or page in Pelican, if post or page is unspecified, it will
+create a post by default
+
+positional arguments:
+  title        Post/Page title, enclosed in quotes
+
+optional arguments:
+  -h, --help   show this help message and exit
+  --page       Create a new page
+  --post       Create a new blog post
+  -c CATEGORY  Category for post/page
+  -t TAGS      Tags, comma separated
+```
+
+The command can be found at this path:
+``BASE_DIR/src/riot-site/``
+
+Make sure your virtualenv is active before using this utility.
 
 How-to: Author & publish a blog post
 -------------------------------------
+
 
 
 How-to: Author & publish a new page
