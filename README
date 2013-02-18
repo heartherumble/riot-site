@@ -91,7 +91,7 @@ Your new post with the appropriate meta info can be found at:
 
 Edit the file with your content and commit the result. If you have the development
 server running, it will have already compiled it and updated the ``gh-pages``
-folder. You can also preview this post on your local machine at
+folder. You can then also preview this post on your local machine at
 ``http://localhost:8000/``
 
 To deploy, switch to ``BASE_DIR/gh-pages``, commit the changes and push up to
@@ -103,7 +103,7 @@ How-to: Author & publish a new page
 From the command line:
 
 ```bash
-$ ./pelican_new_post.py -c category1,category2 -t tag1,tag2 --page "My new blog post"
+$ ./pelican_new_post.py -c category1,category2 -t tag1,tag2 --page "My new page"
 ```
 
 > **NOTE** :
@@ -114,7 +114,7 @@ Your new page with the appropriate meta info can be found at:
 
 Edit the file with your content and commit the result. If you have the development
 server running, it will have already compiled it and updated the ``gh-pages``
-folder. You can also preview this page on your local machine at
+folder. You can then also preview this page on your local machine at
 ``http://localhost:8000/``
 
 To deploy, switch to ``BASE_DIR/gh-pages``, commit the changes and push up to
@@ -122,7 +122,9 @@ Github.
 
 How-to: Edit the homepage
 -------------------------
+The homepage is not in Markdown. You can edit the content by editing this file:
+``BASE_DIR/src/riot-site/themes/templates/pages/index.html``.
 
-
-
-
+The header and footer content are includes:
+* ``BASE_DIR/src/riot-site/themes/templates/pages/footer.html``
+* ``BASE_DIR/src/riot-site/themes/templates/pages/header.html``
