@@ -5,43 +5,46 @@ served from the ``gh-pages`` branch.
 
 3rd Party Requirements
 ----------------------
-Markdown==2.2.0
-Pygments==1.5
-pelican==3.0
+* Markdown==2.2.0
+* Pygments==1.5
+* pelican==3.0
 
 Initial Setup
 -------------
 From a ``BASE_DIR`` (e.g. ``/dev/riot/``) do the following:
 
-- Create a ``riot-site`` folder and ``gh-pages`` folder
-- Create a virtualenv and activate it
-- Checkout the ``master`` branch
-- Checkout the ``gh-pages`` branch
-- Install requirements
+* Create a ``riot-site`` folder and ``gh-pages`` folder
+* Create a virtualenv and activate it
+* Checkout the ``master`` branch
+* Checkout the ``gh-pages`` branch
+* Install requirements
 
-    :::bash
-    $ mkdir -p riot-site gh-pages
-    $ virtualenv ve
-    $ source ve/bin/activate
-    $ cd riot-site && git clone git@github.com:heartherumble/riot-site.git
-    $ git checkout master
-    $ cd ../gh-pages/ && git clone git@github.com:heartherumble/riot-site.git
-    $ git checkout gh-pages
-    $ cd ../ && pip install -r riot-site/requirements.txt
+```bash
+$ mkdir -p riot-site gh-pages
+$ virtualenv ve
+$ source ve/bin/activate
+$ cd riot-site && git clone git@github.com:heartherumble/riot-site.git
+$ git checkout master
+$ cd ../gh-pages/ && git clone git@github.com:heartherumble/riot-site.git
+$ git checkout gh-pages
+$ cd ../ && pip install -r riot-site/requirements.txt
+```
 
 To preview the site locally:
 
-    :::bash
-    $ cd BASE_DIR/riot-site/riot-site/
-    $ ./develop_server.sh start
+```bash
+$ cd BASE_DIR/riot-site/riot-site/
+$ ./develop_server.sh start
+```
 
 This rebuilds the site to ``BASE_DIR/gh-pages`` and does so automatically when
 you create or edit content.
 
 To stop the server:
 
-    :::bash
-    $ ./develop_server.sh stop
+```bash
+$ ./develop_server.sh stop
+```
 
 
 How-to: Author & publish a blog post
