@@ -2,12 +2,6 @@
 
 {% block title %}{{ page.title }} - {{ super() }}{% endblock %}
 
-{% block css %}
-        {{ super() }}
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/grid.css">
-        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/homepage.css">
-{% endblock %}
-
 {% block body %}
         {% include 'pages/page.html' %}
 {% endblock %}

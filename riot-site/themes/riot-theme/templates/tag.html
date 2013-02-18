@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Tags - {{ super() }}{% endblock %}
+
+{% block body %}
+    <section id="logo-header" class="row first">
+        <h1><div class="logo"><a href="/">Riot</a></div></h1>
+    </section>
+    {% if articles %}
+    <section id="post" class="row post">
+    <div class="content clear">
+        <h2>Tag: {{ tag.name }}</h2>
+        <dl>
+        {% for article in articles %}
+            <dt><h3>{{ article.locale_date }}</h3></dt>
+            <dd><h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2></dd>
+        {% endfor %}
+        </dl>
+    </div>
+    </section>
+    {% else %}
+    <section id="post" class="row post">
+        <h3>There are no archives currently.</h3>
+    </section>
+    {% endif %}
+{% endblock %}
