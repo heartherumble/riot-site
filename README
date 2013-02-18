@@ -27,7 +27,7 @@ $ cd src && git clone git@github.com:heartherumble/riot-site.git
 $ git checkout master
 $ cd ../gh-pages/ && git clone git@github.com:heartherumble/riot-site.git
 $ git checkout gh-pages
-$ cd ../ && pip install -r riot-site/requirements.txt
+$ cd ../ && pip install -r src/requirements.txt
 ```
 
 To preview the site locally:
@@ -46,14 +46,14 @@ To stop the server:
 $ ./develop_server.sh stop
 ```
 
-> **NOTE**:
+> **NOTE** :
 > Contrary to the pelican docs, we are not going to use the Makefile or
 > the make command.
 
 Command-line Utility
 --------------------
 ```bash
-» ./pelican_new_post.py --help
+$ ./pelican_new_post.py --help
 usage: pelican_new_post.py [-h] [--page] [--post] [-c CATEGORY] [-t TAGS] title
 
 Create a new post or page in Pelican, if post or page is unspecified, it will
@@ -77,12 +77,48 @@ Make sure your virtualenv is active before using this utility.
 
 How-to: Author & publish a blog post
 -------------------------------------
+From the command line:
 
+```bash
+$ ./pelican_new_post.py -c category1,category2 -t tag1,tag2 "My new blog post"
+```
+
+> **NOTE** :
+> Categories and tags are optional.
+
+Your new post with the appropriate meta info can be found at:
+``BASE_DIR/src/riot-site/content/``
+
+Edit the file with your content and commit the result. If you have the development
+server running, it will have already compiled it and updated the ``gh-pages``
+folder. You can also preview this post on your local machine at
+``http://localhost:8000/``
+
+To deploy, switch to ``BASE_DIR/gh-pages``, commit the changes and push up to
+Github.
 
 
 How-to: Author & publish a new page
 -----------------------------------
+From the command line:
 
+```bash
+$ ./pelican_new_post.py -c category1,category2 -t tag1,tag2 --page "My new blog post"
+```
+
+> **NOTE** :
+> Categories and tags are optional.
+
+Your new page with the appropriate meta info can be found at:
+``BASE_DIR/src/riot-site/content/pages/``
+
+Edit the file with your content and commit the result. If you have the development
+server running, it will have already compiled it and updated the ``gh-pages``
+folder. You can also preview this page on your local machine at
+``http://localhost:8000/``
+
+To deploy, switch to ``BASE_DIR/gh-pages``, commit the changes and push up to
+Github.
 
 How-to: Edit the homepage
 -------------------------
