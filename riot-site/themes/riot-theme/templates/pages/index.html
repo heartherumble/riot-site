@@ -14,7 +14,7 @@
             <h1><div class="logo"><a href="/">Riot</a></div></h1>
             {{ page.content }}
         </section>
-        {% elif page.slug == 'index' %}
+        {% else %}
         <section id="what" class="row first">
             <h2>Hello.</h2>
             <h2>We're from Chicago &amp; we build things, so people can go surfing.</h2>
@@ -57,8 +57,5 @@
             <h2>Write us</h2>
             <p>We'd love to hear from you! <a href="mailto:hello@riot.io">Get in touch</a>.</p>
         </section>
-        {% else %}
-        <h1>????</h1>
-        {% include 'pages/page.html' %}
         {% endif %}
 {% endblock %}
